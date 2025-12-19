@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Java Project</title>
+  <title>AICaptcha</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,48 +15,65 @@
   <!-- Project Content -->
   <section class="project-page">
 
-    <h1>Java Project</h1>
+    <h1>AICaptcha</h1>
 
-    <img src="images/java-preview.png" alt="Java Project Screenshot" class="project-image">
+    <!-- Screenshot / Preview -->
+    <img src="images/java-preview.png" alt="AICaptcha Screenshot" class="project-image">
 
+    <!-- Description -->
     <h2>Description</h2>
     <p>
-      This Java project solves <strong>[briefly state the problem]</strong>.
-      It demonstrates object-oriented programming and modular design principles.
+      AICaptcha is a Java-based program that generates a CAPTCHA using 8 AI-generated images and 1 real image.
+      Users interact with a RECaptcha-style interface, selecting the real image among the AI-generated ones.
+      This project demonstrates proficiency in Java, GUI handling, and automated image selection logic.
     </p>
 
-    <h2>What This Project Demonstrates</h2>
+    <!-- Features -->
+    <h2>Features</h2>
     <ul>
-      <li>Java fundamentals and OOP design</li>
-      <li>Algorithmic thinking and data structures</li>
-      <li>Ability to design and implement a complete solution</li>
-      <li>Readable and maintainable code</li>
+      <li><strong>AI-Generated Image Selection:</strong> Combines 8 AI images with 1 real image to simulate a RECaptcha challenge.</li>
+      <li><strong>Interactive GUI:</strong> Users click the image they believe is real; program provides visual feedback.</li>
+      <li><strong>Expandable Design:</strong> Easily add new images to the pool for testing or demonstration.</li>
+      <li><strong>Animated Feedback:</strong> Shows a checkmark or X when a selection is made, then closes window gracefully.</li>
     </ul>
 
-    <h2>Tech Stack</h2>
-    <ul>
-      <li>Java 8/11</li>
-      <li>[Libraries or tools used]</li>
-    </ul>
-
-    <h2>Key Features</h2>
-    <ul>
-      <li>Feature 1 – short, concrete description</li>
-      <li>Feature 2 – functionality highlight</li>
-      <li>Feature 3 – logic/performance/robustness highlight</li>
-    </ul>
-
-    <h2>How to Run</h2>
-    <p>
-      Clone the repository and run the main class:
-    </p>
+    <!-- Project Structure -->
+    <h2>Project Structure</h2>
     <pre>
-git clone https://github.com/lucasesquivel/java-project
-cd java-project
-javac Main.java
-java Main
+AICaptcha/
+├─ cap2.java        # Main program file
+├─ images/          # Folder containing real and AI images
+└─ README.md
     </pre>
 
+    <!-- Installation / How to Run -->
+    <h2>How to Run</h2>
+    <p>
+      Place the <code>AICaptcha</code> folder in your Java projects directory and run:
+    </p>
+    <pre>
+javac cap2.java
+java cap2
+    </pre>
+
+    <!-- Technologies & Skills Demonstrated -->
+    <h2>Technologies & Skills Demonstrated</h2>
+    <ul>
+      <li>Java programming fundamentals</li>
+      <li>GUI design and event handling</li>
+      <li>Image processing and layout for interactive applications</li>
+      <li>Clean code and modular project structure</li>
+    </ul>
+
+    <!-- Future Work / Enhancements -->
+    <h2>Future Work / Enhancements</h2>
+    <ul>
+      <li>Add additional AI image sets for more complex CAPTCHA challenges</li>
+      <li>Integrate with web-based RECaptcha simulation</li>
+      <li>Improve GUI responsiveness and animations</li>
+    </ul>
+
+    <!-- Links -->
     <h2>Links</h2>
     <p>
       <a href="https://github.com/lucasesquivel/java-project" target="_blank" rel="noopener noreferrer">

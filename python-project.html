@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Python Project</title>
+  <title>AD Detector</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,54 +15,107 @@
   <!-- Project Content -->
   <section class="project-page">
 
-    <h1>Python Project</h1>
+    <h1>AD Detector</h1>
 
     <!-- Screenshot / Preview -->
-    <img src="images/python-preview.png" alt="Python Project Screenshot" class="project-image">
+    <img src="images/python-preview.png" alt="AD Detector Screenshot" class="project-image">
 
     <!-- Description -->
     <h2>Description</h2>
     <p>
-      This Python project is a <strong>[brief description of what the project does]</strong>.  
-      It demonstrates Python programming skills, clean code structure, and practical problem-solving.  
-      The project is fully functional, modular, and easy to understand for anyone reviewing the code.
+      AD Detector is a Python-based automated popup detection and persistent overlay system.  
+      It identifies popups on the screen in real-time and displays a configurable semi-transparent overlay to prevent distractions or interruptions.  
+      Designed with modularity and configurability in mind, this project demonstrates strong Python engineering, UI handling, and automation skills.
     </p>
 
-    <!-- What Recruiters Want to See -->
-    <h2>What This Project Demonstrates</h2>
+    <!-- Features -->
+    <h2>Features</h2>
     <ul>
-      <li>Proficiency with Python 3 and coding best practices</li>
-      <li>Modular and maintainable code structure</li>
-      <li>Application of data structures and algorithms where appropriate</li>
-      <li>Ability to design, implement, and test a complete software solution</li>
+      <li><strong>Real-time Popup Detection:</strong> Utilizes template matching to identify popups efficiently.</li>
+      <li><strong>Persistent Overlay:</strong> Configurable color and transparency overlay that adapts to screen dimensions.</li>
+      <li><strong>Debug Mode:</strong> Optional debug windows for ROI inspection, ensuring easy troubleshooting and fine-tuning.</li>
+      <li><strong>Highly Configurable:</strong> All parameters (overlay size, color, transparency, debug mode) are centralized in <code>config.py</code> for easy adjustments.</li>
+      <li><strong>Clean Logging:</strong> Activity and detection events are logged in a structured manner for monitoring.</li>
     </ul>
 
-    <!-- Tech Stack -->
-    <h2>Tech Stack</h2>
-    <ul>
-      <li>Python 3</li>
-      <li>[Libraries or frameworks used, if any]</li>
-      <li>[Optional: Tools, testing frameworks]</li>
-    </ul>
+    <!-- Project Structure -->
+    <h2>Project Structure</h2>
+    <pre>
+adDetector/
+│
+├─ adDetector/          # Core source code
+│   ├─ __init__.py
+│   ├─ config.py        # Centralized configuration
+│   ├─ detector.py      # Main detection logic
+│   └─ find_coords.py   # Helper functions for ROI and coordinates
+│
+├─ assets/              # Popup templates and other resources
+│   └─ popup_template.png
+│
+├─ logs/                # Optional runtime logs
+├─ tests/               # Optional unit tests
+├─ .gitignore
+├─ requirements.txt     # Python dependencies
+├─ README.md
+└─ LICENSE
+    </pre>
 
-    <!-- Key Features -->
-    <h2>Key Features</h2>
-    <ul>
-      <li>Feature 1 – describe a major functionality</li>
-      <li>Feature 2 – describe another key functionality</li>
-      <li>Feature 3 – highlight logic, performance, or robustness</li>
-    </ul>
-
-    <!-- How to Run -->
-    <h2>How to Run</h2>
-    <p>
-      Clone the repository and run the main Python file locally:
-    </p>
+    <!-- Installation -->
+    <h2>Installation</h2>
+    <p>Clone the repository and set up a virtual environment:</p>
     <pre>
 git clone https://github.com/lucasesquivel/python-project
 cd python-project
-python main.py
+python -m venv venv
+# Activate venv
+# Linux / macOS:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
+pip install -r requirements.txt
     </pre>
+
+    <!-- Usage -->
+    <h2>Usage</h2>
+    <p>
+      Run the main detector:
+    </p>
+    <pre>
+python -m adDetector.detector
+    </pre>
+    <p>
+      Optional: Enable debug mode in <code>config.py</code> to see ROI windows for real-time detection visualization.
+    </p>
+
+    <!-- Configuration -->
+    <h2>Configuration</h2>
+    <p>All overlay and detection parameters are centralized in <code>config.py</code>:</p>
+    <pre>
+OVERLAY_WIDTH = SCREEN_WIDTH - 600
+OVERLAY_HEIGHT = SCREEN_HEIGHT - 600
+OVERLAY_COLOR = "black"
+OVERLAY_ALPHA = 0.7
+DEBUG = True
+    </pre>
+    <p>This allows quick adjustments to overlay appearance, logging, and debug behavior without modifying core logic.</p>
+
+    <!-- Technologies & Skills -->
+    <h2>Technologies & Skills Demonstrated</h2>
+    <ul>
+      <li>Python 3.x & OpenCV for image processing</li>
+      <li>Modular, maintainable project architecture</li>
+      <li>Real-time screen capture and overlay rendering</li>
+      <li>Logging and debugging best practices</li>
+      <li>Config-driven design for flexibility and scalability</li>
+    </ul>
+
+    <!-- Optional Enhancements -->
+    <h2>Future Work / Enhancements</h2>
+    <ul>
+      <li>Multi-monitor support for full-screen applications</li>
+      <li>Dynamic template updates via user input</li>
+      <li>Machine learning-based popup classification for smarter detection</li>
+    </ul>
 
     <!-- Links -->
     <h2>Links</h2>
